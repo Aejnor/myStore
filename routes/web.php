@@ -21,8 +21,10 @@ Route::get('/productos/create', 'ProductoController@create')->middleware('auth')
 Route::get('/productos/{productos}', 'ProductoController@show');
 Route::post('/productos/create', 'ProductoController@store')->middleware('auth');
 
-// Rutas de usuario
+// Rutas de usuarios
 
+Route::get('/profile', 'UsersController@profile')->middleware('auth');
+Route::get('/user/{user}', 'UsersController@index')->name('users.username');
 
 
 // Rutas de carrito

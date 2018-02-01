@@ -14,6 +14,11 @@
             @foreach($chunk as $producto)
                 <div class="col-md-4 space">
                     <div>
+                        <a class="btn pull-right" href="/user/{{ $producto->user->username }}">
+                            {{ $producto->user->username }}
+                        </a>
+                    </div>
+                    <div>
                         <h3>
                            Producto: {{ $producto['nombre'] }}
                         </h3>
