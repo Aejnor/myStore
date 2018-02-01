@@ -21,7 +21,7 @@
                     <p><span class="label label-info">Web:</span> <strong>{{$user->website }}</strong></p>
                 </div>
                 <div class="col-md-12">
-                    <p><span class="label label-info">Biografia:</span> <strong>{{$user->about }}</strong></p>
+                    <p><span class="label label-info">Descripcion:</span> <strong>{{$user->about }}</strong></p>
                 </div>
             </div>
 
