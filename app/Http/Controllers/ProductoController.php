@@ -32,7 +32,10 @@ class ProductoController extends Controller
 
 
     public function store(CreateProductoRequest $request){
+        $user = $request->user();
+
         Producto::create([
+            'user_id'   => $user->id,
             'nombre'    => $request->input('nombre'),
             'marca'     => $request->input('marca'),
             'precio'    => $request->input('precio'),

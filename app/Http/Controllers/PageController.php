@@ -13,7 +13,7 @@ class PageController extends Controller
      */
 
     public function home(){
-        $producto = Producto::orderBy('created_at', 'desc')->paginate(10);
+        $producto = Producto::orderBy('created_at', 'desc')->paginate(9);
 
         return view('home', [
             'productos' => $producto

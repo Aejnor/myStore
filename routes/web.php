@@ -13,13 +13,22 @@
 
 Route::get('/', 'PageController@home');
 
-Route::get('/productos/create', 'ProductoController@create');
+
+
+// Rutas de producto
+
+Route::get('/productos/create', 'ProductoController@create')->middleware('auth');
 Route::get('/productos/{productos}', 'ProductoController@show');
-Route::post('/productos/create', 'ProductoController@store');
+Route::post('/productos/create', 'ProductoController@store')->middleware('auth');
+
+// Rutas de usuario
+
+
+
+// Rutas de carrito
+
+
+
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

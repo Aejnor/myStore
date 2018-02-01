@@ -21,6 +21,8 @@ class CreateProductoTable extends Migration
             $table->text('detalle');
             $table->char('categoria', 255);
             $table->timestamps('');
+
+
         });
     }
 
