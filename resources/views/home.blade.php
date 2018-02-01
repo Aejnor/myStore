@@ -10,33 +10,34 @@
         </div>
     </div>
     @foreach($productos->chunk(3) as $chunk)
-        <div class="row course-set courses__row producto">
+        <div class="row">
             @foreach($chunk as $producto)
-                <div class="col-md-4 space">
+                <div class="col-md-4 space panel-success">
                     <div>
                         <a class="btn pull-right" href="/user/{{ $producto->user->username }}">
                             {{ $producto->user->username }}
                         </a>
                     </div>
-                    <div>
-                        <h3>
-                           Producto: {{ $producto['nombre'] }}
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Producto: {{ $producto['nombre'] }}
                         </h3>
                     </div>
+                    <div class="panel-body">
+                        <div>
+                            <span> Marca:</span> {{ $producto['marca'] }}
+                        </div>
 
-                    <div>
-                         Marca: {{ $producto['marca'] }}
-                    </div>
-
-                    <div>
-                        <h4 class="price">
-                            Precio: {{ $producto['precio'] }} €
-                        </h4>
-                    </div>
-                    <div>
-                        <p>
-                            Descripción: {{ $producto['detalle'] }}
-                        </p>
+                        <div>
+                            <h4 class="price">
+                                Precio: {{ $producto['precio'] }} €
+                            </h4>
+                        </div>
+                        <div>
+                            <p>
+                                Descripción: {{ $producto['detalle'] }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             @endforeach
