@@ -1,3 +1,24 @@
 .space{
-    padding-left: 100px;
+    padding-left: 80px;
+}
+
+.corto{
+    width: 30rem;
+}
+.espacioArriba{
+    margin-top: 9px;
+}
+
+.espacio
+{
+    margin-top: 8px ;
+    margin-bottom: 10px;
+}
+
+.pagination{
+    justify-content: center;
+}
+
+.centro{
+    justify-content: center;
 }
