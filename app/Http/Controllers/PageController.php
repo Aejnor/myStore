@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Producto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class PageController extends Controller
 {

@@ -23,7 +23,7 @@ Route::get('/productos/{productos}', 'ProductoController@show');
 Route::get('/user/{user}', 'UsersController@index')->name('users.username');
 
 // Ruta Ajax de paginacion
-Route::get('/giveproducts', 'PagesController@giveProducts');
+Route::get('/giveproducts', 'PageController@giveProducts');
 
 Auth::routes();
 

@@ -37,3 +37,4 @@
 @endforeach
 
 <div class="pagination">{{ $productos->links("pagination::bootstrap-4") }}</div>
+
