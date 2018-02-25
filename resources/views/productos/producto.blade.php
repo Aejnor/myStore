@@ -4,30 +4,31 @@
 
 @foreach($productos->chunk(1) as $chunk)
     <div class="container">
-        <div class="row panel">
+        <div class="row">
             @foreach($chunk as $producto)
                 <div class="col-md-12">
-                    <div>
-                        <a class="btn pull-right" href="/user/{{ $producto->user->username }}">
-                            {{ $producto->user->username }}
-                        </a>
-                    </div>
+                    <div class="card card-body border-secondary mb-3 text-center centro bg-light">
+                        <div class="card-header bg-secondary text-white">
+                            <h3>
+                                Producto: {{ $producto['nombre'] }}
+                            </h3>
+                        </div>
 
-                    <div>
-                        <h4>
-                            Producto: {{ $producto['nombre'] }}
-                        </h4>
-                    </div>
-
-                    <div>
-                        <h4>
-                            <strong>Precio:</strong> {{ $producto['precio'] }} €
-                        </h4>
-                    </div>
-                    <div>
-                        <p>
-                            <strong>Descripción:</strong> {{ $producto['detalle'] }}
-                        </p>
+                        <ul class="list-group list-group-flush">
+                            <div class="list-group-item bg-light">
+                                <span><strong>Marca:</strong></span> {{ $producto['marca'] }}
+                            </div>
+                            <div class="list-group-item bg-light">
+                                <span class="price">
+                                    <strong>Precio:</strong> {{ $producto['precio'] }} €
+                                </span>
+                            </div>
+                            <div class="list-group-item bg-light">
+                                <p>
+                                    <strong>Descripción: </strong>{{ $producto['detalle'] }}
+                                </p>
+                            </div>
+                        </ul>
                     </div>
                 </div>
         </div>

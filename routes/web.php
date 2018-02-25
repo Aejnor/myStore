@@ -14,28 +14,25 @@
 Route::get('/', 'PageController@home');
 
 
-
 // Rutas de producto
 
-Route::get('/productos/create', 'ProductoController@create')->middleware('auth');
 Route::get('/productos/{productos}', 'ProductoController@show');
-Route::post('/productos/create', 'ProductoController@store')->middleware('auth');
 
 // Rutas de usuarios
 
-Route::get('/profile', 'UsersController@profile')->middleware('auth');
 Route::get('/user/{user}', 'UsersController@index')->name('users.username');
 
-
-// Rutas de carrito
-
-
-
+// Ruta Ajax de paginacion
+Route::get('/giveproducts', 'PagesController@giveProducts');
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/productos/create', 'ProductoController@create')->middleware('auth');
+    Route::post('/productos/create', 'ProductoController@store')->middleware('auth');
+    Route::get('/profile', 'UsersController@profile')->middleware('auth');
+
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
