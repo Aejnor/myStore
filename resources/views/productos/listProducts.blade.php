@@ -1,9 +1,10 @@
-@foreach($productos->chunk(3) as $chunk)
+
+@foreach($productos->chunk(2) as $chunk)
     <div class="row">
         @foreach($chunk as $producto)
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card card-body border-secondary mb-2 centro bg-light">
-                    <div class="card-header bg-secondary text-white">
+                    <div class="card-header bg-secondary text-white parallax">
                         <h3>
                             Producto: {{ $producto['nombre'] }}
                         </h3>
@@ -19,12 +20,17 @@
                                 </span>
                         </div>
                         <div class="list-group-item bg-light">
+                                <span>
+                                    <strong>Categoria:</strong> {{ $producto['categoria'] }} €
+                                </span>
+                        </div>
+                        <div class="list-group-item bg-light">
                             <p>
                                 <strong>Descripción: </strong>{{ $producto['detalle'] }}
                             </p>
                         </div>
                         <div class="list-group-item bg-light">
-                            <strong>Vendedor: <a class="badge badge-pill badge-info pull-right"
+                            <strong>Vendedor: <a class="badge badge-pill badge-info pull-right text-white parallax3"
                                                  href="/user/{{ $producto->user->username }}">
                                     {{ $producto->user->name.' '.$producto->user->surname }}
                                 </a></strong>

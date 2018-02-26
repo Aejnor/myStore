@@ -38,7 +38,8 @@
                         <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Registrarse</a></li>
                     @else
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
@@ -63,12 +64,15 @@
 
         </div>
     </nav>
-
-    @yield('content')
+    <div class="container">
+        @yield('content')
+    </div>
 </div>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.js" type="text/javascript"></script>
 @stack('scripts')
 </body>
 </html>

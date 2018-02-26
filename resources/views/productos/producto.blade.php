@@ -7,8 +7,8 @@
         <div class="row">
             @foreach($chunk as $producto)
                 <div class="col-md-12">
-                    <div class="card card-body border-secondary mb-3 text-center centro bg-light">
-                        <div class="card-header bg-secondary text-white">
+                    <div class="card card-body border-secondary mb-2 text-center centro bg-light">
+                        <div class="card-header bg-secondary text-white parallax2">
                             <h3>
                                 Producto: {{ $producto['nombre'] }}
                             </h3>
@@ -24,11 +24,15 @@
                                 </span>
                             </div>
                             <div class="list-group-item bg-light">
+                                <span><strong>Categoria:</strong></span> {{ $producto['categoria'] }}
+                            </div>
+                            <div class="list-group-item bg-light">
                                 <p>
                                     <strong>Descripción: </strong>{{ $producto['detalle'] }}
                                 </p>
                             </div>
                         </ul>
+
                     </div>
                 </div>
         </div>

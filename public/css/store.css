@@ -1,24 +1,55 @@
-.space{
+.space {
     padding-left: 80px;
 }
 
-.corto{
+.corto {
     width: 30rem;
 }
-.espacioArriba{
+
+.espacioArriba {
     margin-top: 9px;
 }
 
-.espacio
-{
-    margin-top: 8px ;
+.espacio {
+    margin-top: 8px;
     margin-bottom: 10px;
 }
 
-.pagination{
+.pagination {
     justify-content: center;
 }
 
-.centro{
+.centro {
     justify-content: center;
+}
+
+.parallax {
+    background-image: url("https://elartedejercy.files.wordpress.com/2016/03/cuadro-de-combinacion-de-colores-804388.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url("https://archive-media-0.nyafuu.org/wg/image/1490/09/1490094301812.gif");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    background-image: url("http://2.bp.blogspot.com/-u8WBpqgwCdk/Uy_AB5QIrlI/AAAAAAAADiE/lqbtrrO9WwA/s1600/gif-1.jpg ");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    background-color: #d3c6b8;
 }

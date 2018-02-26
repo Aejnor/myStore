@@ -14,7 +14,7 @@ class PageController extends Controller
      */
 
     public function home(){
-        $producto = Producto::orderBy('created_at', 'desc')->paginate(9);
+        $producto = Producto::orderBy('created_at', 'desc')->paginate(8);
 
         return view('home', [
             'productos' => $producto
@@ -23,7 +23,7 @@ class PageController extends Controller
 
     public function giveProducts(){
         if (request()->ajax()){
-            $producto = Producto::orderBy('created_at', 'desc')->paginate(9);
+            $producto = Producto::orderBy('created_at', 'desc')->paginate(8);
             return View::make('productos.listProducts', array('productos' => $producto))->render();
         }else{
             return redirect('/');
