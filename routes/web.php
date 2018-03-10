@@ -18,6 +18,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/productos/create', 'ProductoController@create');
+    Route::post('/productos/validar' , 'ProductoController@validacionAjax');
     Route::post('/productos/create', 'ProductoController@store');
     Route::get('/profile', 'UsersController@profile');
 });

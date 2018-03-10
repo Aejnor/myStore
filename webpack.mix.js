@@ -12,4 +12,9 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+    .js('resources/assets/js/draggable.js', 'public/js')
+    .js('resources/assets/js/jquerymask.js', 'public/js')
+    .js('resources/assets/js/validacionProducto.js', 'public/js')
+    .js('resources/assets/js/paginationIndex.js', 'public/js')
+    .styles(['resources/assets/css/spinner.css','resources/assets/css/store.css'], 'public/css/own.css')
     .sass('resources/assets/sass/app.scss', 'public/css');

@@ -55,7 +55,7 @@
                                 <input
                                         type="text"
                                         class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
-                                        name="surname"
+                                        name="username"
                                         value="{{ old('username') }}"
                                         {{--required--}}
                                 >

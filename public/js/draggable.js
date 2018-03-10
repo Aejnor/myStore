@@ -60,43 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 52);
+/******/ 	return __webpack_require__(__webpack_require__.s = 46);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 52:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(53);
+module.exports = __webpack_require__(47);
 
 
 /***/ }),
 
-/***/ 53:
+/***/ 47:
 /***/ (function(module, exports) {
 
-function getDataPaginate() {
-    event.preventDefault();
-
-    var enlace = $(event.target);
-    var valor = parseInt(enlace.text());
-
-    $(event.target).addClass("active");
-    axios.get('/giveproducts?page=' + valor).then(function (response) {
-        $('#productlist').html(response.data);
-        attachAsyncTask();
-    }).catch(function (error) {
-        console.log(error);
-    });
-}
-
-function attachAsyncTask() {
-    $(".pagination > li > a").on('click', getDataPaginate);
-}
-
 $(function () {
-    attachAsyncTask();
+    $(".card").draggable({
+        revert: true
+    });
 });
 
 /***/ })

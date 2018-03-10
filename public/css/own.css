@@ -1,0 +1,83 @@
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 100%;
+    border-top: 16px solid #3498db;
+    border-bottom: 16px solid #3498db;
+    width: 7px;
+    height: 7px;
+    -webkit-animation: spin 0.6s linear infinite;
+    animation: spin 0.6s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.space {
+    padding-left: 80px;
+}
+
+.corto {
+    width: 30rem;
+}
+
+.espacioArriba {
+    margin-top: 9px;
+}
+
+.espacio {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.centro {
+    justify-content: center;
+}
+
+.parallax {
+    background-image: url("https://elartedejercy.files.wordpress.com/2016/03/cuadro-de-combinacion-de-colores-804388.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url("https://archive-media-0.nyafuu.org/wg/image/1490/09/1490094301812.gif");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    background-image: url("http://2.bp.blogspot.com/-u8WBpqgwCdk/Uy_AB5QIrlI/AAAAAAAADiE/lqbtrrO9WwA/s1600/gif-1.jpg ");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    background-color: #d3c6b8;
+}

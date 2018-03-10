@@ -10,7 +10,7 @@
     </div>
 
 
-    <div class="productlist">
+    <div id="productlist">
         @include('productos.listProducts')
     </div>
 

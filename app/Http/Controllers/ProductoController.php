@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateProductoRequest;
+use App\Http\Requests\CreateProductoRequestAjax;
 use App\Producto;
 use Illuminate\Http\Request;
 
@@ -44,6 +45,10 @@ class ProductoController extends Controller
         ]);
 
         return redirect('/');
+    }
+
+    public function validacionAjax(CreateProductoRequestAjax $request){
+        return array();
     }
 
 }

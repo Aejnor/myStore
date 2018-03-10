@@ -1,4 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/js/validacionProducto.js": "/js/validacionProducto.js",
+    "/js/paginationIndex.js": "/js/paginationIndex.js",
+    "/js/jquerymask.js": "/js/jquerymask.js",
+    "/js/draggable.js": "/js/draggable.js",
+    "/css/own.css": "/css/own.css"
 }
