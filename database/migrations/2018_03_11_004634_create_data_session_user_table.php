@@ -17,7 +17,7 @@ class CreateDataSessionUserTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('ip');
-            $table->string('explore');
+            $table->string('explorer');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
 

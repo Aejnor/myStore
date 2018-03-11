@@ -18,11 +18,6 @@ class Factura extends Model
         'created_at', 'id', 'updated_at',
     ];
 
-    public function producto()
-    {
-        return $this->hasMany(Producto::class);
-    }
-
     public function pedido()
     {
         return $this->belongsTo(Pedido::class);

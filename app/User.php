@@ -27,6 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    // Relaciones del usuario
+
+
     public function productos()
     {
         return $this->hasMany(Producto::class)->latest();

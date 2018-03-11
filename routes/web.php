@@ -15,10 +15,10 @@ Route::get('/', 'PageController@home');
 
 Auth::routes();
 
-
+// Rutas que necesitan autorizacion.
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/productos/create', 'ProductoController@create');
-    Route::post('/productos/validar' , 'ProductoController@validacionAjax');
+    Route::post('/productos/validar', 'ProductoController@validacionAjax');
     Route::post('/productos/create', 'ProductoController@store');
     Route::get('/profile', 'UsersController@profile');
     Route::get('/profile/edit', 'UsersController@conf');
