@@ -24,6 +24,6 @@ en este caso todos los usuarios de pruebas que se crean con el seed, tienen la
 ***pass* ``secret``**
 
 ------------
-!> ```
-!> Todo lo relacionado con pedido, factura y reviews; No funciona, esta pendiente de programar
-!> ```
+ ```
+ Todo lo relacionado con pedido, factura y reviews; No funciona, esta pendiente de programar
+ ```
