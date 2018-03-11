@@ -22,3 +22,8 @@ de datos llamada myStore.
 - Y los datos de inicio de sesion los cogemos directamente de la base de datos,
 en este caso todos los usuarios de pruebas que se crean con el seed, tienen la
 ***pass* ``secret``**
+
+------------
+ ```
+ Todo lo relacionado con pedido, factura y reviews; No funciona, esta pendiente de programar
+ ```
