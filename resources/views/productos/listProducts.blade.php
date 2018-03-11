@@ -21,7 +21,7 @@
                         </div>
                         <div class="list-group-item bg-light">
                                 <span>
-                                    <strong>Categoria:</strong> {{ $producto['categoria'] }} €
+                                    <strong>Categoria:</strong> {{ $producto['categoria'] }}
                                 </span>
                         </div>
                         <div class="list-group-item bg-light">

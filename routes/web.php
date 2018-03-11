@@ -21,6 +21,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/productos/validar' , 'ProductoController@validacionAjax');
     Route::post('/productos/create', 'ProductoController@store');
     Route::get('/profile', 'UsersController@profile');
+    Route::get('/profile/edit', 'UsersController@conf');
+    Route::get('/profile/edit/account', 'UsersController@edit')->name('profile.account');
+    Route::patch('/profile/edit/account', 'UsersController@update');
+    Route::get('/profile/edit/password', 'UsersController@edit')->name('profile.password');
+    Route::patch('/profile/edit/password', 'UsersController@update');
+    Route::get('/profile/edit/delete', 'UsersController@edit')->name('profile.delete');
+    Route::delete('/profile/edit/delete', 'UsersController@destroy');
 });
 
 // Rutas de producto

@@ -31,4 +31,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Producto::class)->latest();
     }
+
+    public function pedido()
+    {
+        return $this->hasMany(Pedido::class);
+    }
+
+    public function factura()
+    {
+        return $this->hasMany(Factura::class);
+    }
+
+    public function review()
+    {
+        return $this->hasMany(Review::class)->latest();
+    }
 }
