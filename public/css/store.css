@@ -33,8 +33,8 @@
 }
 
 .parallax2 {
-    background-image: url("https://archive-media-0.nyafuu.org/wg/image/1490/09/1490094301812.gif");
-
+    /*background-image: url("https://archive-media-0.nyafuu.org/wg/image/1490/09/1490094301812.gif");*/
+    background-image: url("https://media.giphy.com/media/QM1GAb2C8Sk2A/giphy.gif");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

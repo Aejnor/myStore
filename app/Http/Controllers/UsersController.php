@@ -83,11 +83,29 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateUserRequest $request)
     {
+        $path = $request->path();
+        $user = Auth::user();
 
+        if( strpos($path, 'account')) {
+            $data = array_filter($request->all());
+            $user = User::findOrFail($user->id);
+            $user->fill($data);
+        }elseif ( strpos($path, 'password') ){
+            if( ! Hash::check($request->get('current_password'), $user->password ) ){
+                return redirect()->back()->with('error', 'La constraseña no es la que tienes ahora');
+            }
+            if( strcmp($request->get('current_password'), $request->get('password')) == 0){
+                return redirect()->back()->with('error', 'La contraseña tiene que ser diferente a la anterior.');
+            }
+            $user->password = bcrypt($request->get('password'));
+        }
+        $user->save();
+        return redirect()
+            ->route('profile.account')
+            ->with('exito', 'Datos actualizados');
     }
-
     /**
      * Remove the specified resource from storage.
      *

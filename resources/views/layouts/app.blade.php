@@ -50,6 +50,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                 <a href="{{ url('/profile') }}" class="dropdown-item">Perfil</a>
+                                <a href="{{ url('/profile/edit') }}" class="dropdown-item">Editar</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="{{ route('logout') }}" class="dropdown-item"
                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
