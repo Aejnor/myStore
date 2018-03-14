@@ -15,6 +15,8 @@ Route::get('/', 'PageController@home');
 
 Auth::routes();
 
+Route::post('/register/validar', 'Auth/RegisterController@validacionAjax');
+
 // Rutas que necesitan autorizacion.
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/productos/create', 'ProductoController@create');
@@ -23,6 +25,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', 'UsersController@profile');
     Route::get('/profile/edit', 'UsersController@conf');
     Route::get('/profile/edit/account', 'UsersController@edit')->name('profile.account');
+    Route::post('/profile/edit/account/validar', 'UsersController@validacionAjax');
     Route::patch('/profile/edit/account', 'UsersController@update');
     Route::get('/profile/edit/password', 'UsersController@edit')->name('profile.password');
     Route::patch('/profile/edit/password', 'UsersController@update');

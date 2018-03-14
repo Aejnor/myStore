@@ -55,7 +55,7 @@
         <div class=" list-group-item">
             <label class="{{ $errors->has('about') ? 'is-invalid-label' : ''}}" for="about">Descripcion</label>
             <br>
-            <input type="textarea" name="phone" id="phone" placeholder="{{ $user->about }}"
+            <input type="textarea" name="about" id="about" placeholder="{{ $user->about }}"
                    class="{{ $errors->has('about') ? 'is-invalid-input' : ''}} form-control">
             @if( $errors->has('about') )
                 <p class="validation-error">{{ $errors->first('about') }}</p>
@@ -75,7 +75,7 @@
     </ul>
     <br>
     <div class="align-content-center">
-        <button type="submit" class="button">Actualizar</button>
+        <button type="submit" id="botonEditarUsuario" class="button">Actualizar</button>
     </div>
 
 </div>

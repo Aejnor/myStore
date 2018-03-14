@@ -29,7 +29,7 @@
                     <h5>{{ session('error') }}</h5>
                 </div>
             @endif
-            <form action="{{ Request::url() }}" method="POST" enctype="multipart/form-data" class="col-md-8">
+            <form action="{{ Request::url() }}" method="POST" id="formularioEditarUser" enctype="multipart/form-data" class="col-md-8">
                 {{ csrf_field() }}
                 <div class="card">
                 @if(Request::is('profile/edit/account'))

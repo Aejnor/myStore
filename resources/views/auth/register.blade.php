@@ -7,7 +7,7 @@
             <div class="card border-dark">
                 <div class="card-header border-dark bg-info">Registro</div>
                 <div class="card-body">
-                    <form role="form" method="POST" action="{{ route('register') }}">
+                    <form role="form" method="POST" action="{{ route('register') }}" id="formularioCrearUser">
                         {!! csrf_field() !!}
 
                         <div class="form-group row">
@@ -27,6 +27,8 @@
                                     </div>
                                 @endif
                             </div>
+                            @include('layouts.spinner')
+
                         </div>
 
                         <div class="form-group row">
@@ -46,6 +48,8 @@
                                     </div>
                                 @endif
                             </div>
+                            @include('layouts.spinner')
+
                         </div>
 
                         <div class="form-group row">
@@ -65,6 +69,8 @@
                                     </div>
                                 @endif
                             </div>
+                            @include('layouts.spinner')
+
                         </div>
 
 
@@ -86,6 +92,8 @@
                                     </div>
                                 @endif
                             </div>
+                            @include('layouts.spinner')
+
                         </div>
 
                         <div class="form-group row">
@@ -104,6 +112,8 @@
                                     </div>
                                 @endif
                             </div>
+                            @include('layouts.spinner')
+
                         </div>
 
                         <div class="form-group row">
@@ -126,7 +136,7 @@
 
                         <div class="form-group row">
                             <div class="col-lg-6 offset-lg-4">
-                                <button type="submit" class="btn btn-outline-success">
+                                <button type="submit" id="botonCreacionUsuario" class="btn btn-outline-success">
                                     Registrarse
                                 </button>
                             </div>
@@ -138,3 +148,7 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/validacionUsuario.js') }}"></script>
+@endpush
