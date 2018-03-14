@@ -27,3 +27,15 @@ en este caso todos los usuarios de pruebas que se crean con el seed, tienen la
  ```
  Todo lo relacionado con pedido, factura y reviews; No funciona, esta pendiente de programar
  ```
+ 
+ 
+ #Parte Cliente/Interfaz
+ - Componentes no utilizados en el proyecto
+ 
+    - Carousel: No lo he visto necesario.
+    - Breadcrumb: No me gusta.
+    - Collapse: No he visto el sitio donde ponerlo
+    - Popover: No me gusta el estilo.
+    - Modal: No he tenido la oportunidad de incorporarlo.
+    - Progress: No era necesario.
+    
