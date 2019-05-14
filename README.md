@@ -29,7 +29,7 @@ en este caso todos los usuarios de pruebas que se crean con el seed, tienen la
  ```
  
  
- #Parte Cliente/Interfaz
+ # Parte Cliente/Interfaz
  - Componentes no utilizados en el proyecto
  
     - Carousel: No lo he visto necesario.
